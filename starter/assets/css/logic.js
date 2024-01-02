@@ -18,4 +18,24 @@ let questions= [
         choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
         answer: 'choiceA'
     },
+    {
+        title: "Second question",
+        choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
+        answer: 'choiceA'
+    }
+    {
+        title: "Third question",
+        choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
+        answer: 'choiceA'
+    }
+    {
+        title: "Forth question",
+        choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
+        answer: 'choiceA'
+    }
+    {
+        title: "Last question",
+        choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
+        answer: 'choiceA'
+    }
 ]
