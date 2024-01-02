@@ -9,3 +9,13 @@ const finalScore = document.getElementById("final-score")
 const initals = document.getElementById("initials")
 const submitBtn = document.getElementById("submit")
 const feedbackEl = document.getElementById("feedback")
+
+
+
+let questions= [
+    {
+        title: "First question",
+        choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
+        answer: 'choiceA'
+    },
+]
