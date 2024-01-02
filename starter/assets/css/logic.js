@@ -39,3 +39,8 @@ let questions= [
         answer: 'choiceA'
     }
 ]
+
+let timer = questions.length = 10
+let timerInterval;
+let questionIndex = 0
+
