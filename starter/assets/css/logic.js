@@ -77,6 +77,22 @@ function getQuestions() {
 }
 
 
+function selectAnswer(event) {
+    if (event.target.value !== questions [questionIndex].answer) {
+            timer-=15
+        
+     if (timer <0) {
+        timer = 0
+     }    
+     
+     timerEl.textContent = timer
+     feedbackEl.textContent = "Wrong!"
+
+    }else {
+        feedbackEl.textContent = "Correct!"
+    }
+    
+}
 
 
 
