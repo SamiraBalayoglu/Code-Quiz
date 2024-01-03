@@ -113,6 +113,6 @@ function endQuiz() {
     endScreen.removeAttribute("class")
 }
 
-
+startBtn.addEventListener("click", startQuiz)
 
 
