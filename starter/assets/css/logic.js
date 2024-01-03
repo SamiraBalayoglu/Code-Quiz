@@ -91,7 +91,19 @@ function selectAnswer(event) {
     }else {
         feedbackEl.textContent = "Correct!"
     }
-    
+
+    feedbackEl.setAttribute("class", "feedback")
+    setTimeout(function (){
+        feedbackEl.setAttribute("class", "feedback hide")
+    }, 1000)
+
+    questionIndex++
+
+    if (questionIndex === questions.length) {
+        endQuiz()
+    }else{
+        getQuestions()
+    }
 }
 
 
