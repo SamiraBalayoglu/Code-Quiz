@@ -42,11 +42,13 @@ Technologies Used
 HTML
 CSS
 JavaScript
-How to Run
+
+## How to Run
 Simply open the index.html file in a web browser to start the quiz.
 
-## Demo
-A live demo of the quiz app can be found here.
+## Github page
+Use the [link](https://samirabalayoglu.github.io/Code-Quiz/) to access the page on Github.
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
