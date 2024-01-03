@@ -66,6 +66,13 @@ function getQuestions() {
 
     for (let i = 0; i < currentQuestion.choices.length; i++) {
         const choice = currentQuestion.choices [i];
+    let choiceBtn = document.createElement("button")
+    choiceBtn.setAttribute("class","choice")
+    choiceBtn.setAttribute("value","choice")
+    choiceBtn.textContent = choice
+
+    choiceBtn.addEventListener("click",selectAnswer)
+    questionChoices.appendChild(choiceBtn)
     }
 }
 
