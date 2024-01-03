@@ -57,7 +57,17 @@ function startQuiz() {
     getQuestions()
 }
 
+function getQuestions() {
+    let currentQuestion = questions[questionIndex]
 
+    titleEl.textContent = currentQuestion.title
+
+    questionChoices.innerHTML = ""
+
+    for (let i = 0; i < currentQuestion.choices.length; i++) {
+        const choice = currentQuestion.choices [i];
+    }
+}
 
 
 
