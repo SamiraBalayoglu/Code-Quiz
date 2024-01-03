@@ -107,7 +107,11 @@ function selectAnswer(event) {
 }
 
 
-
+function endQuiz() {
+    clearInterval(timerInterval)
+    questionsEl.setAttribute("class", "hide")
+    endScreen.removeAttribute("class")
+}
 
 
 
