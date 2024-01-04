@@ -116,3 +116,4 @@ function endQuiz() {
 startBtn.addEventListener("click", startQuiz)
 
 
+
