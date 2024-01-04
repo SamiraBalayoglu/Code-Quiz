@@ -38,13 +38,16 @@ let questions= [
     },
 ];
 
-let timer = questions.length = 10;
+const incorrectTimerPenalty = 15;
+const startTimer = questions.length * incorrectTimerPenalty;
+let timer = startTimer;
 let timerInterval;
 let questionIndex = 0;
 
 function startQuiz() {
     startScreen.setAttribute("class", "hide");
     questionsEl.removeAttribute("class");
+    timer = startTimer;
     timerInterval = setInterval(function (){
         timer--
         timerEl.textContent = timer
@@ -64,20 +67,18 @@ function getQuestions() {
 
     for (let i = 0; i < currentQuestion.choices.length; i++) {
         const choice = currentQuestion.choices [i];
-    let choiceBtn = document.createElement("button")
-    choiceBtn.setAttribute("class","choice")
-    choiceBtn.setAttribute("value","choice")
-    choiceBtn.textContent = choice
-
-    choiceBtn.addEventListener("click",selectAnswer)
-    questionChoices.appendChild(choiceBtn)
+        let choiceBtn = document.createElement("button")
+        choiceBtn.setAttribute("class","choice")
+        choiceBtn.setAttribute("value",choice);
+        choiceBtn.textContent = choice
+        choiceBtn.addEventListener("click",selectAnswer)
+        questionChoices.appendChild(choiceBtn)
     }
 }
 
-
 function selectAnswer(event) {
     if (event.target.value !== questions [questionIndex].answer) {
-        timer-=15
+        timer-=incorrectTimerPenalty;
 
         if (timer <0) {
             timer = 0
@@ -85,7 +86,7 @@ function selectAnswer(event) {
 
         timerEl.textContent = timer
         feedbackEl.textContent = "Wrong!"
-    }else {
+    } else {
         feedbackEl.textContent = "Correct!"
     }
 
@@ -98,7 +99,7 @@ function selectAnswer(event) {
 
     if (questionIndex === questions.length) {
         endQuiz()
-    }else{
+    } else{
         getQuestions()
     }
 }
