@@ -22,22 +22,22 @@ let questions= [
         title: "Second question",
         choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
         answer: 'choiceA'
-    }
+    },
     {
         title: "Third question",
         choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
         answer: 'choiceA'
-    }
+    },
     {
         title: "Forth question",
         choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
         answer: 'choiceA'
-    }
+    },
     {
         title: "Last question",
         choices: ['choiceA', 'choiceB', 'choiceC', 'choiceD,'],
         answer: 'choiceA'
-    }
+    },
 ]
 
 let timer = questions.length = 10
@@ -50,7 +50,7 @@ function startQuiz() {
     timerInterval = setInterval(function (){
         timer--
         timerEl.textContent = timer
-        if timer <=0){
+        (if) timer <=0){
             endQuiz()
         }
     }, 1000)
@@ -78,10 +78,10 @@ function getQuestions() {
 
 
 function selectAnswer(event) {
-    if (event.target.value !== questions [questionIndex].answer) {
+    (if) (event.target.value !== questions [questionIndex].answer) {
             timer-=15
         
-     if (timer <0) {
+     (if) (timer <0) {
         timer = 0
      }    
      
@@ -99,7 +99,7 @@ function selectAnswer(event) {
 
     questionIndex++
 
-    if (questionIndex === questions.length) {
+    (if) (questionIndex === questions.length) {
         endQuiz()
     }else{
         getQuestions()
